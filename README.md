@@ -1,6 +1,6 @@
 # Privacy Policy for VideoMap
 
-**Last Updated:** June 19, 2026
+**Last Updated:** June 26, 2026
 
 At VideoMap, we respect your privacy and are committed to protecting the personal data you share with us. This Privacy Policy explains how we collect, use, and safeguard your information when you use the VideoMap mobile application (the "App") and its associated backend services.
 
@@ -16,7 +16,7 @@ At VideoMap, we respect your privacy and are committed to protecting the persona
 ### B. Automatically Processed Data
 * **Anonymous Account Identifier:** The App may create a Supabase anonymous user ID so you can use VideoMap without first creating an email/password account. This ID is used to keep your saved collections, places, jobs, and subscription entitlement separate from other users.
 * **Geographic Locations:** Our backend parses address details from the captions of the videos you submit and converts them into latitude and longitude coordinates. This is used solely to pin videos onto the interactive map inside the App.
-* **App Usage Events:** We may record lightweight in-app events, such as paywall views, purchase or restore outcomes, and save-limit blocks, to understand whether the App is working correctly and improve the subscription experience.
+* **App Usage & Interaction Data:** We record in-app events and interactions — such as paywall views, purchase or restore outcomes, save-limit blocks, the screens you view, and taps/navigation within the App — to understand how the App is used, confirm it is working correctly, and improve it. These events are linked to your anonymous account identifier (described above) so we can analyze usage on a per-user basis. We do **not** record your screen and we do **not** capture the contents of what you type.
 * **App Usage Data:** We do not automatically track your device's precise location in the background.
 
 ---
@@ -41,6 +41,7 @@ We utilize reliable third-party infrastructure and APIs to deliver our services.
 * **Google Play Billing:** Used to process Android in-app subscriptions and payment management.
 * **LocationIQ:** Used to convert address text (e.g., "123 Main St") into latitude and longitude coordinates.
 * **Google Gemini API:** Used to parse and extract restaurant names or location details from post captions.
+* **PostHog:** Product analytics provider used to capture in-app usage and interaction events, helping us measure performance and improve the App. PostHog does not receive screen recordings.
 * **Instagram (Meta):** When playing or embedding videos, the content is served directly from Instagram’s servers.
 
 ---
