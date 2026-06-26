@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Your Data - Clipmap</title>
+    <meta name="description" content="How to delete your Clipmap account and associated data, what is deleted or kept, and how to request deletion.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0b0f19; --card-bg: rgba(255,255,255,0.03); --card-border: rgba(255,255,255,0.06);
+            --text-primary: #f3f4f6; --text-secondary: #9ca3af; --accent-primary: #6366f1; --accent-secondary: #a855f7;
+            --font-display: 'Outfit', sans-serif; --font-body: 'Inter', sans-serif;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background: var(--bg-color); color: var(--text-primary); font-family: var(--font-body); line-height: 1.65; }
+        .wrap { max-width: 760px; margin: 0 auto; padding: 64px 24px 100px; }
+        h1 { font-family: var(--font-display); font-size: 2.4rem; font-weight: 800; margin-bottom: 8px;
+             background: linear-gradient(to right, #ffffff, #93c5fd); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .sub { color: var(--accent-primary); font-weight: 600; font-size: .9rem; text-transform: uppercase; letter-spacing: .05em; margin-bottom: 32px; }
+        h2 { font-family: var(--font-display); font-size: 1.3rem; font-weight: 700; margin: 32px 0 12px; color: #fff; }
+        p { color: var(--text-secondary); margin-bottom: 14px; }
+        ol, ul { color: var(--text-secondary); margin: 0 0 16px 22px; }
+        li { margin-bottom: 8px; }
+        strong { color: #fff; font-weight: 600; }
+        .card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 16px; padding: 24px 26px; margin-bottom: 20px; }
+        .accent { border-color: rgba(99,102,241,0.25); }
+        a { color: #93c5fd; }
+        .mail { display: inline-block; margin-top: 6px; background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+                color: #fff; text-decoration: none; font-weight: 600; padding: 12px 22px; border-radius: 12px; }
+        .muted { font-size: .85rem; color: #6b7280; margin-top: 28px; }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <h1>Delete Your Data</h1>
+        <div class="sub">Clipmap &middot; developer: ishankgp</div>
+
+        <p><strong>Clipmap</strong> is the app published on Google Play under the package
+        <code>com.ishankgp.videomap</code>. You can delete your account and all associated data at
+        any time using either method below.</p>
+
+        <div class="card accent">
+            <h2>Option 1 — Delete in the app (instant)</h2>
+            <ol>
+                <li>Open <strong>Clipmap</strong>.</li>
+                <li>Tap <strong>Profile</strong> (bottom navigation bar).</li>
+                <li>Tap <strong>Delete my data</strong>, then tap again to confirm.</li>
+            </ol>
+            <p>This <strong>immediately and permanently</strong> deletes your account and all of your
+            data. It cannot be undone.</p>
+        </div>
+
+        <div class="card">
+            <h2>Option 2 — Request by email</h2>
+            <p>If you can't access the app, email us from any address with the subject
+            <strong>"Delete my Clipmap data"</strong>. We complete verified requests within
+            <strong>30 days</strong>.</p>
+            <a class="mail" href="mailto:ankitpangy@gmail.com?subject=Delete%20my%20Clipmap%20data">ankitpangy@gmail.com</a>
+        </div>
+
+        <h2>What is deleted</h2>
+        <ul>
+            <li>Your anonymous account identifier (your Clipmap guest account).</li>
+            <li>All of your saved places and collections.</li>
+            <li>Your reel-processing (curation) job records.</li>
+            <li>Your subscription entitlement record held by us.</li>
+            <li>Product-analytics events associated with you.</li>
+        </ul>
+
+        <h2>What is kept</h2>
+        <ul>
+            <li><strong>Shared place reference data</strong> (e.g. a restaurant's name and map location)
+            that is not personal to you and may be referenced by other users.</li>
+            <li><strong>Aggregated/anonymized analytics</strong> that can no longer identify you.</li>
+            <li><strong>Billing records</strong> that Google Play and RevenueCat are required to retain
+            for legal, tax, or fraud-prevention purposes.</li>
+        </ul>
+
+        <h2>Retention period</h2>
+        <p>In-app deletion takes effect <strong>immediately</strong>. Email requests are completed
+        within <strong>30 days</strong>. Backups containing residual copies are cycled out within
+        <strong>90 days</strong>.</p>
+
+        <p class="muted">See also our <a href="./index.html">Privacy Policy</a>. Questions:
+        <a href="mailto:ankitpangy@gmail.com">ankitpangy@gmail.com</a>.</p>
+    </div>
+</body>
+</html>
