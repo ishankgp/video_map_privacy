@@ -39,9 +39,9 @@ We utilize reliable third-party infrastructure and APIs to deliver our services.
 * **Supabase:** Used for user authentication and hosting our database securely.
 * **RevenueCat:** Used to manage subscription entitlements, purchase status, renewals, cancellations, and restore purchases.
 * **Google Play Billing:** Used to process Android in-app subscriptions and payment management.
-* **LocationIQ:** Used to convert address text (e.g., "123 Main St") into latitude and longitude coordinates.
-* **Google Gemini API:** Used to parse and extract restaurant names or location details from post captions.
-* **PostHog:** Product analytics provider used to capture in-app usage and interaction events, helping us measure performance and improve the App. PostHog does not receive screen recordings.
+* **Google Places API:** Used to convert place names and address text (e.g., "123 Main St") into latitude/longitude coordinates and a map location, and to retrieve a representative cover photo.
+* **Google Gemini API:** Used to identify places and location details from the content you submit — the post caption, top comments, and (when needed) the reel video itself, which is uploaded for analysis and deleted afterward.
+* **PostHog:** Product analytics provider used to capture in-app usage and interaction events, and AI/LLM operational metrics (model, token counts, latency, and cost) so we can monitor and improve the Gemini-powered curation pipeline. PostHog receives only this metadata — **not** the prompt/response content — and does not receive screen recordings.
 * **Instagram (Meta):** When playing or embedding videos, the content is served directly from Instagram’s servers.
 
 ---
