@@ -9,7 +9,6 @@ At VideoMap, we respect your privacy and are committed to protecting the persona
 ## 1. Information We Collect
 
 ### A. Data You Provide Directly
-* **Account Credentials:** If you choose to sign up or log in, we collect your email address and password.
 * **Shared Links & Video URLs:** When you share or paste Instagram reels, videos, or posts into the App, we collect the text, URLs, and any accompanying caption content you submit.
 * **Subscription Information:** If you purchase VideoMap Pro, we process subscription status, product identifiers, entitlement status, expiration dates, and purchase/restore events. Payments are processed by Google Play and RevenueCat; we do not receive or store your full payment card details.
 
