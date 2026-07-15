@@ -14,8 +14,9 @@ At Clipmap, we respect your privacy and are committed to protecting the personal
 
 ### B. Automatically Processed Data
 * **Anonymous Account Identifier:** The App may create a Supabase anonymous user ID so you can use Clipmap without first creating an email/password account. This ID is used to keep your saved collections, places, jobs, and subscription entitlement separate from other users.
-* **Semantic Extraction & Geographic Locations:** Our backend parses address details from the captions of the videos you submit and converts them into latitude and longitude coordinates. We also extract qualitative insights (like a summary of the place, highlights, and tags) and generate a numerical representation (embedding) of this data. This powers the natural language search capabilities within the App.
-* **App Usage & Interaction Data:** We record in-app events and interactions — such as paywall views, purchase or restore outcomes, save-limit blocks, the screens you view, and taps/navigation within the App — to understand how the App is used, confirm it is working correctly, and improve it. These events are linked to your anonymous account identifier (described above) so we can analyze usage on a per-user basis. We do **not** record your screen and we do **not** capture the contents of what you type.
+* **Semantic Extraction & Geographic Locations:** Our backend parses address details from the captions of the videos you submit and converts them into latitude and longitude coordinates. We also extract qualitative insights (like a summary of the place, highlights, tags, confidence, source, ambiguity notes, failure reason codes, and result summaries) and generate a numerical representation (embedding) of this data. This powers the natural language search and recovery capabilities within the App.
+* **Manual Place Search & Corrections:** If the automatic place detection cannot confidently map a reel, you may search for and select a place manually. We process the place search query you submit, the Google Places candidates returned, the selected place, optional notes, and the related reel/job identifier so the place can be saved and subscription/free save limits can be applied fairly.
+* **App Usage & Interaction Data:** We record in-app events and interactions — such as paywall views, purchase or restore outcomes, save-limit blocks, fair-use blocks, manual place additions/corrections, the screens you view, and taps/navigation within the App — to understand how the App is used, confirm it is working correctly, and improve it. These events are linked to your anonymous account identifier (described above) so we can analyze usage on a per-user basis. We do **not** record your screen. We only process text you intentionally submit to Clipmap, such as reel URLs, search queries, or optional notes.
 * **App Usage Data:** We do not automatically track your device's precise location in the background.
 
 ---
@@ -26,6 +27,7 @@ We use the collected information for the following purposes:
 * To provide, maintain, and improve the App's core functionality (pinning shared videos to the map).
 * To manage and secure your user account.
 * To perform geolocation queries (converting text addresses to coordinates).
+* To provide manual place search and correction when automatic curation is uncertain or fails.
 * To retrieve relevant post metadata to display in the App.
 * To provide, verify, restore, and enforce paid subscription features.
 * To measure basic product performance and diagnose issues, including subscription funnel and save-limit events.
@@ -35,10 +37,10 @@ We use the collected information for the following purposes:
 ## 3. Third-Party Services We Use
 
 We utilize reliable third-party infrastructure and APIs to deliver our services. These partners process data according to their own privacy guidelines:
-* **Supabase:** Used for user authentication and hosting our database securely.
+* **Supabase:** Used for user authentication and hosting our database securely, including saved places, collections, curation jobs, reason codes, result summaries, and subscription entitlement metadata.
 * **RevenueCat:** Used to manage subscription entitlements, purchase status, plan identifiers, purchase currency, renewals, cancellations, and restore purchases. We use secure Google Play service credentials with RevenueCat to validate purchase and subscription status; we do not receive or store your full payment card details.
 * **Google Play Billing:** Used to process Android in-app subscriptions, regional prices/currencies, and payment management.
-* **Google Places API:** Used to convert place names and address text (e.g., "123 Main St") into latitude/longitude coordinates and a map location, and to retrieve a representative cover photo.
+* **Google Places API:** Used to convert place names and address text (e.g., "123 Main St") into latitude/longitude coordinates and a map location, retrieve a representative cover photo, and return candidate places for manual search/correction.
 * **Google Gemini API:** Used to identify places and location details from the content you submit — the post caption, top comments, and (when needed) the reel video itself, which is uploaded for analysis and deleted afterward. We also use Gemini to generate semantic embeddings of these places for search capabilities.
 * **PostHog:** Product analytics provider used to capture in-app usage and interaction events, and AI/LLM operational metrics (model, token counts, latency, and cost) so we can monitor and improve the Gemini-powered curation pipeline. PostHog receives only this metadata — **not** the prompt/response content — and does not receive screen recordings.
 * **Instagram (Meta):** When playing or embedding videos, the content is served directly from Instagram’s servers.
