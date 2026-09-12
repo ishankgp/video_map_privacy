@@ -381,7 +381,7 @@
             <span class="app-name">Clipmap</span>
         </div>
         <h1>Privacy Policy</h1>
-        <div class="last-updated">Last Updated: July 15, 2026</div>
+        <div class="last-updated">Last Updated: September 13, 2026</div>
     </header>
 
     <div class="container">
@@ -418,7 +418,7 @@
                     <li><strong>Anonymous Account Identifier:</strong> The App may create a Supabase anonymous user ID so you can use Clipmap without first creating an email/password account. This ID is used to keep your saved collections, places, jobs, and subscription entitlement separate from other users.</li>
                     <li><strong>Semantic Extraction & Geographic Locations:</strong> Our backend parses address details from the captions of the videos you submit and converts them into latitude and longitude coordinates. We also extract qualitative insights (like a summary of the place, highlights, tags, confidence, source, ambiguity notes, failure reason codes, and result summaries) and generate a numerical representation (embedding) of this data. This powers the natural language search and recovery capabilities within the App.</li>
                     <li><strong>Manual Place Search & Corrections:</strong> If the automatic place detection cannot confidently map a reel, you may search for and select a place manually. We process the place search query you submit, the Google Places candidates returned, the selected place, optional notes, and the related reel/job identifier so the place can be saved and subscription/free save limits can be applied fairly.</li>
-                    <li><strong>App Usage & Interaction Data:</strong> We record in-app events and interactions — such as paywall views, purchase or restore outcomes, save-limit blocks, fair-use blocks, manual place additions/corrections, the screens you view, and taps/navigation within the App — to understand how the App is used, confirm it is working correctly, and improve it. These events are linked to your anonymous account identifier (described above) so we can analyze usage on a per-user basis. We do <strong>not</strong> record your screen. We only process text you intentionally submit to Clipmap, such as reel URLs, search queries, or optional notes.</li>
+                    <li><strong>App Usage & Interaction Data:</strong> We record in-app events and interactions — such as paywall views, purchase or restore outcomes, save-limit blocks, fair-use blocks, manual place additions/corrections, the screens you view, and taps/navigation within the App — to understand how the App is used, confirm it is working correctly, and improve it. These events are linked to your anonymous account identifier (described above) so we can analyze usage on a per-user basis. Screen recording starts disabled and is optional, as described below. We only process text you intentionally submit to Clipmap, such as reel URLs, search queries, or optional notes.</li>
                 </ul>
             </section>
 
@@ -445,12 +445,19 @@
                     <li><strong>Google Play Billing:</strong> Used to process Android in-app subscriptions, regional prices/currencies, and payment management.</li>
                     <li><strong>Google Places API:</strong> Used to convert place names and address text (e.g., "123 Main St") into latitude/longitude coordinates and a map location, retrieve a representative cover photo, and return candidate places for manual search/correction.</li>
                     <li><strong>Google Gemini API:</strong> Used to identify places and location details from the content you submit — the post caption, top comments, and (when needed) the reel video itself, which is uploaded for analysis and deleted afterward. We also use Gemini to generate semantic embeddings of these places for search capabilities.</li>
-                    <li><strong>PostHog:</strong> Product analytics provider used to capture in-app usage and interaction events, and AI/LLM operational metrics (model, token counts, latency, and cost) so we can monitor and improve the Gemini-powered curation pipeline. PostHog receives only this metadata — <strong>not</strong> the prompt/response content — and does not receive screen recordings.</li>
+                    <li><strong>PostHog:</strong> Product analytics provider used to capture in-app usage and interaction events, and AI/LLM operational metrics (model, token counts, latency, and cost) so we can monitor and improve the Gemini-powered curation pipeline. PostHog receives only this metadata — <strong>not</strong> the prompt/response content — and receives optional masked session recordings only when that feature is enabled and you explicitly opt in.</li>
                     <li><strong>Instagram (Meta):</strong> When playing or embedding videos, the content is served directly from Instagram’s servers.</li>
                 </ul>
             </section>
 
-            <section id="data-sharing">
+            <section id="product-learning"><h2>Product Learning, Feedback and Optional Recordings</h2>
+<p><strong>Product learning:</strong> We record app opens and activity sessions, screens and onboarding steps viewed, save requests and outcomes, search result counts and selections, deliberate place opens, Maps handoffs, and feedback prompt exposures and responses. These events can include your Supabase account ID, a random event/session/attempt identifier, app version and platform, occurrence time, controlled failure category and elapsed time. We use approximate IP-derived country at first observed use for country-level reporting; this is not nationality or the destination of your saved places. Silent authentication and token refreshes are not counted as engagement.</p>
+<p><strong>Private video and feedback review:</strong> Submitted Instagram source links, including unsuccessful attempts, are retained with save-job records or restricted event properties so authorized Clipmap reviewers can investigate them. Optional written feedback is stored with your account and, where relevant, the save attempt. Raw search text, source URLs, personal notes and written feedback are excluded from PostHog behavioral event properties. Search text is still processed to provide search. Please avoid personal or sensitive information in written feedback.</p>
+<p><strong>Optional masked recordings:</strong> Where available, Profile offers an optional recording control. Declining does not affect functionality. Recording starts disabled and requires your opt-in on this device. We sample about 20% of consenting sessions and may start recording a consenting session after a save or search failure. Earlier activity in an unsampled session may not be available. User-entered text and personal content are masked, map and media surfaces are blocked, and network bodies and console recording are disabled. Recordings are retained in PostHog for 30 days. You can turn recordings off in Profile; withdrawal stops further recording.</p>
+<p><strong>Frequency, access and retention:</strong> Automatic feedback requests are optional and limited to at most once per account every 14 days, including across devices. Profile feedback remains available. A small local event retry queue retains at most 200 events for up to seven days and clears records from a previous account on account switching. Authorized reviewers use private local reports; those reports are not published. Account-linked save records and feedback follow our account-data deletion process. Contact us to request removal of analytics or recordings associated with your account.</p>
+</section>
+
+<section id="data-sharing">
                 <h2><span>04.</span> Data Sharing and Disclosure</h2>
                 <p>We do not sell, trade, or rent your personal information to third parties. We do not share your private data with advertisers. We may only disclose your data:</p>
                 <ul>
